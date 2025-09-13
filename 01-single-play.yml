@@ -1,0 +1,10 @@
+---
+- name: Update Tomcat servers
+  hosts: Tomcat
+
+  tasks:
+  - name: create directory
+    file:
+      name: /home/ec2-user/new_dir
+      state: directory
+...
