@@ -1,1 +1,4 @@
+
+Good
+
 # ansible-invetory
