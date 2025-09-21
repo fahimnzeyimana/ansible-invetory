@@ -10,7 +10,7 @@
 
   - name: create directory
     file:
-      name: /home/ec2-user/new_dir_12
+      name: /home/ec2-user/new_dir_1
       state: directory
 
 - name: Update Ansible2 servers
