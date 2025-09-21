@@ -1,6 +1,6 @@
 ---
 - name: Install HTTP servers
-  hosts: Ansible2
+  hosts: Ansible2 ; Ansible1
   become: yes
 
   tasks:
