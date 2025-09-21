@@ -1,6 +1,6 @@
 ---
-- name: Update Tomcat servers
-  hosts: Tomcat
+- name: Update Ansible1 servers
+  hosts: Ansible1
 
   tasks:
   - name: create directory

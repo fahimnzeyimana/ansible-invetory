@@ -1,0 +1,21 @@
+---
+- name: Install HTTP servers
+  hosts: Ansible1
+  become: yes
+
+  tasks:
+  - name: Install HTTPD
+    yum:
+      name: httpd
+      state: present
+
+  - name: Start HTTPD
+    service:
+      name: httpd
+      state: start
+
+  - name: Enable HTTPD
+    service:
+      name: httpd
+      enabled: yes
+...
