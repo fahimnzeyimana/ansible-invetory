@@ -1,0 +1,12 @@
+---
+- name: fixed_page
+  hosts: Ansible2
+  become: yes
+
+  tasks:
+  - name: Update server page
+    copy:
+      src: fixed_page.html
+      dest: /var/www/html/fixed_page.html
+
+...

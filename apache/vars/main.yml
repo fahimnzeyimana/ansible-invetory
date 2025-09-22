@@ -1,2 +1,6 @@
 ---
 # vars file for apache
+
+
+ myusername: "fahim"
+ mylocation: "Pakistan"

@@ -1,0 +1,12 @@
+---
+  - name: Update server page
+    copy:
+      src: fixed_page.html
+      dest: /var/www/html/fixed_page.html
+
+  - name: Update server page
+    template:
+      src: Automated.j2
+      dest: /var/www/html/Automated.html
+
+...
