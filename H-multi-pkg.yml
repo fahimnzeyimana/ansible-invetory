@@ -4,6 +4,7 @@
   become: yes 
 
   tasks:
+  # Install HTTPD server on Amazon Linux
   - name: Install HTTPD
     yum:
       name: httpd
@@ -22,6 +23,7 @@
       enabled: yes
     when: ansible_distribution == "Amazon"
 
+  # Install Apache server on Ubuntu
   - name: Install apache2
     apt:
       name: apache2
@@ -40,10 +42,12 @@
       enabled: yes
     when: ansible_distribution == "Ubuntu"
 
+  # Install Apache server on Debian
   - name: Install Apache HTTPD server
     apt:
       name: apache2
       state: present
+      update_cache: yes
     when: ansible_distribution == "Debian" 
 
   - name: Start apache2
@@ -58,6 +62,7 @@
       enabled: yes
     when: ansible_distribution == "Debian"
 
+  # Install HTTPD server on RedHat
   - name: Install  HTTPD server
     yum:
       name: httpd
