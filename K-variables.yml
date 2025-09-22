@@ -4,7 +4,7 @@
   become: yes
   vars:
      myusername: "fahim"
-     mypassword: P@ssw0rd
+     mylocation: "Pakistan"
 
   tasks:
   - name: Update Automated page
