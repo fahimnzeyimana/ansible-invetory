@@ -1,6 +1,6 @@
 ---
 - name: Static page
-  hosts: Ansible1
+  hosts: Ansible2
   become: yes
 
   tasks:
