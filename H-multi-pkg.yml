@@ -4,80 +4,41 @@
   become: yes 
 
   tasks:
-  # Install HTTPD server on Amazon Linux
+  # Install HTTPD server on Amazon Linux & RedHat
   - name: Install HTTPD
     yum:
       name: httpd
       state: present
-    when: ansible_distribution == "Amazon"
+    when: ansible_distribution == "Amazon" or ansible_distribution == "RedHat"
 
   - name: Start httpd
     service:
       name: httpd
       state: started
-    when: ansible_distribution == "Amazon"
+    when: ansible_distribution == "Amazon" or ansible_distribution == "RedHat"
 
   - name: Enable httpd
     service:
       name: httpd
       enabled: yes
-    when: ansible_distribution == "Amazon"
+    when: ansible_distribution == "Amazon" or ansible_distribution == "RedHat"
 
-  # Install Apache server on Ubuntu
+  # Install Apache server on Ubuntu & Debian
   - name: Install apache2
     apt:
       name: apache2
       state: present
-    when: ansible_distribution == "Ubuntu"
+    when: ansible_distribution == "Ubuntu" or ansible_distribution == "Debian"
 
   - name: Start apache2
     service:
       name: apache2
       state: started
-    when: ansible_distribution == "Ubuntu"
+    when: ansible_distribution == "Ubuntu" or ansible_distribution == "Debian"
 
   - name: Enable apache2
     service:
       name: apache2
       enabled: yes
-    when: ansible_distribution == "Ubuntu"
-
-  # Install Apache server on Debian
-  - name: Install Apache HTTPD server
-    apt:
-      name: apache2
-      state: present
-      update_cache: yes
-    when: ansible_distribution == "Debian" 
-
-  - name: Start apache2
-    service:
-      name: apache2
-      state: started
-    when: ansible_distribution == "Debian"
-
-  - name: Enable apache2
-    service:
-      name: apache2
-      enabled: yes
-    when: ansible_distribution == "Debian"
-
-  # Install HTTPD server on RedHat
-  - name: Install  HTTPD server
-    yum:
-      name: httpd
-      state: present
-    when: ansible_distribution == "RedHat"
-
-  - name: Start httpd
-    service:
-      name: httpd
-      state: started
-    when: ansible_distribution == "RedHat"
-
-  - name: Enable httpd
-    service:
-      name: httpd
-      enabled: yes
-    when: ansible_distribution == "RedHat"
+    when: ansible_distribution == "Ubuntu" or ansible_distribution == "Debian"
 ...
