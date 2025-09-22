@@ -6,7 +6,7 @@
   tasks:
   - name: Update server page
     template:
-      src: dyanamic.j2
-      dest: /var/www/html/dyanamic.html
+      src: Automated.j2
+      dest: /var/www/html/Automated.html
 
 ...
