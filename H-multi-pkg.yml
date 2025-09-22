@@ -1,5 +1,5 @@
 ---
-- name: Install HTTP servers
+- name: Install HTTP & Apache servers
   hosts: g1
   become: yes 
 
