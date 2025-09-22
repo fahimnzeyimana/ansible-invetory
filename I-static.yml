@@ -1,0 +1,12 @@
+---
+- name: Static page
+  hosts: Ansible2
+  become: yes
+
+  tasks:
+  - name: Update server page
+    copy:
+      src: static.html
+      dest: /var/www/html/static.html
+
+...
