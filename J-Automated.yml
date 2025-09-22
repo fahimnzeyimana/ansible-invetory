@@ -1,6 +1,6 @@
 ---
 - name: Static page
-  hosts: Ansible2
+  hosts: g1
   become: yes
 
   tasks:
@@ -8,5 +8,4 @@
     template:
       src: Automated.j2
       dest: /var/www/html/Automated.html
-
 ...
