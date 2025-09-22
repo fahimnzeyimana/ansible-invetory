@@ -1,7 +1,7 @@
 ---
 - name: Install HTTP servers
   hosts: g1
-  become: yes
+  become: yes 
 
   tasks:
   - name: Install HTTPD
@@ -39,4 +39,40 @@
       name: apache2
       enabled: yes
     when: ansible_distribution == "Ubuntu"
+
+  - name: Install Apache HTTPD server
+    apt:
+      name: apache2
+      state: present
+    when: ansible_distribution == "Debian" 
+
+  - name: Start apache2
+    service:
+      name: apache2
+      state: started
+    when: ansible_distribution == "Debian"
+
+  - name: Enable apache2
+    service:
+      name: apache2
+      enabled: yes
+    when: ansible_distribution == "Debian"
+
+  - name: Install  HTTPD server
+    yum:
+      name: httpd
+      state: present
+    when: ansible_distribution == "RedHat"
+
+  - name: Start httpd
+    service:
+      name: httpd
+      state: started
+    when: ansible_distribution == "RedHat"
+
+  - name: Enable httpd
+    service:
+      name: httpd
+      enabled: yes
+    when: ansible_distribution == "RedHat"
 ...
