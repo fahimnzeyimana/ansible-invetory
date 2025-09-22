@@ -3,8 +3,8 @@
   hosts: g1
   become: yes\
   vars:
-    myusername: fahim
-    mypassword: P@ssw0rd
+     myusername: fahim
+     mypassword: P@ssw0rd
 
   tasks:
   - name: Update server page
