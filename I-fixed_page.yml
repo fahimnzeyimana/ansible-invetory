@@ -1,6 +1,6 @@
 ---
 - name: fixed_page
-  hosts: g1
+  hosts: Ansible2
   become: yes
 
   tasks:
