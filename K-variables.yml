@@ -1,13 +1,13 @@
 ---
 - name: variables
   hosts: g1
-  become: yes\
+  become: yes
   vars:
      myusername: fahim
      mypassword: P@ssw0rd
 
   tasks:
-  - name: Update server page
+  - name: Update Automated page
     template:
       src: Automated.j2
       dest: /var/www/html/Automated.html
