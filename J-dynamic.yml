@@ -1,0 +1,12 @@
+---
+- name: Static page
+  hosts: g1
+  become: yes
+
+  tasks:
+  - name: Update server page
+    template:
+      src: dyanamic.j2
+      dest: /var/www/html/dyanamic.html
+
+...
